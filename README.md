@@ -12,18 +12,18 @@ The HTTP server must return valid response headers for a range of files and path
 ## Task & Requirements
 
 ### 1.Server runs and sends valid responses
-Code must run on the marking VM without crashing (e.g. seg faulting) regardless of the inputs. Any code that crashes for any reason may be allocated a score of 0 overall (not just for this component). However, if your code crashes at the submission deadline, still submit it because some marks may be awarded.
+Code must run on the marking VM without crashing (e.g. seg faulting) regardless of the inputs. Any code that crashes for any reason may be allocated a score of 0 overall (not just for this component). However, if your code crashes at the submission deadline, still submit it because some marks may be awarded.\
 \
-Server sends a valid HTTP 200 response in reply to a GET request for an HTML file located in web root directory (not a sub-directory)
+Server sends a valid HTTP 200 response in reply to a GET request for an HTML file located in web root directory (not a sub-directory)\
 \
-Server sends a valid HTTP 404 response in reply to a GET request for a file in the web root directory that does not exist or cannot be opened for reading
+Server sends a valid HTTP 404 response in reply to a GET request for a file in the web root directory that does not exist or cannot be opened for reading\
 \
-(If you are a purist, then if the file exists but cannot be opened for reading, then the program can alternatively return a 403 (Forbidden Error). No extra marks are allocated for that.)
+(If you are a purist, then if the file exists but cannot be opened for reading, then the program can alternatively return a 403 (Forbidden Error). No extra marks are allocated for that.)\
 \
 GET requests using path components ../ should return a 404 error. (Otherwise a query like ../secret would break out of the web root, unless handled specifically.)
 
 ### 2.Server MIME Types and Paths
-Server sends a valid HTTP 200 response with the correct MIME type in reply to a GET request for a file located in web root directory.
+Server sends a valid HTTP 200 response with the correct MIME type in reply to a GET request for a file located in web root directory.\
 \
 Server sends a valid HTTP 200 response with the correct MIME type in reply to a GET request with a path below the web root for any of the specified file types (e.g. GET /css/style.css HTTP/1.0).
 
